@@ -1,5 +1,5 @@
 import { Button } from "./components/ui/button";
-import { FileVideo, Github, Upload, Wand2 } from 'lucide-react'
+import { Github, Wand2 } from 'lucide-react'
 import { Separator } from "./components/ui/separator";
 import { Textarea } from "./components/ui/textarea";
 import { Label } from "@radix-ui/react-label";
