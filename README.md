@@ -1,27 +1,11 @@
-# React + TypeScript + Vite
+# Include VideoUpload.AI (beta)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web que centraliza o upload de novos vídeos no Youtube, e que adiciona uma camada de Inteligência Artificial para transcrever o audio de vídeos, interpretar com base na transcrição gerada o conteúdo e o contexto destes vídeos e sugerir títulos chamativos e descrições com uma boa indexação adequadas automaticamente para serem usadas como informações para upload no Youtube ou outros fins, bem como resumir tudo que está sendo falado no vídeo sem que precisemos ver o vídeo em si. Estou na fase final da implementação e teste, e breve posto o resultado. O código fonte da aplicação será open-source. Ficarei feliz em receber sugestões de melhorias ou poder ajudar alguém em seus projetos pessoais. Algumas das tecnologias usadas no projeto:
 
-Currently, two official plugins are available:
+- React, Tailwind, shadcn/ui e Radix UI, Typescript, Javascript, Criação de API Rest com Node.Js e  Fastify, Prisma, SQlite, OpenAi API, vercel Ai SDK, shdcn.ui, httpie, ffmpeg.wasm com Webassembly e muito mais...
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Linked-in](https://www.linkedin.com/in/bruno-rick-oliveira/) 
 
-## Expanding the ESLint configuration
+## Aplicação em Construção...
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Código será Open-Source.
