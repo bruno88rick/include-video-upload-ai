@@ -8,6 +8,7 @@ Algumas das tecnologias usadas no projeto:
 
 - [Linked-in](https://www.linkedin.com/in/bruno-rick-oliveira/) 
 
-## Aplicação em Construção...
+## Status Atual do Projeto: 
+### Versão "alpha" da aplicação em testes...
 
-Código será Open-Source.
+MIT License (Veja em License.md).
