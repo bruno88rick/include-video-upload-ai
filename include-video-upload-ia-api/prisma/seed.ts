@@ -55,6 +55,32 @@ Transcrição:
 '''`.trim()
     }
   })
+
+  await prisma.prompt.create({
+    data: {
+      title: 'Capítulo YouTube',
+      template: `Seu papel é gerar capítulos para um vídeo do YouTube.
+
+Abaixo você receberá uma transcrição desse vídeo, use essa transcrição para gerar os capítulos, com base nos assuntos falados.
+Abaixo você também receberá uma lista de títulos, use essa lista como referência para os capítulos a serem gerados.
+
+Os capítulos devem ter no máximo 60 caracteres.
+Os capítulos devem ser chamativos e atrativos para maximizar os cliques.
+
+Retorne os capítulos em formato de lista como no exemplo abaixo:
+'''
+- Capítulo 1
+- Capítulo 2
+- Capítulo 3
+'''
+
+Transcrição:
+'''
+{transcription}
+'''`.trim()
+    }
+  })
+
 }
 
 main()
