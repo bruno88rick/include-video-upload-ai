@@ -15,8 +15,7 @@ import logo from './images/logo.png';
 export function App() {
 const [temperature, setTemperature] = useState(0.5)
 const [videoId, setVideoId] = useState<string | null>(null)
-
-
+const gitHubRepository = "https://github.com/bruno88rick/include-video-upload-ai"
 
   const {
     input,
@@ -47,9 +46,9 @@ const [videoId, setVideoId] = useState<string | null>(null)
             Desenvolvido com 💖 por Bruno Ricardo, Include Systems 
           </span>
           <Separator orientation='vertical' className="h-6" />
-          <Button variant="outline">
+          <Button variant="outline" onClick={() => window.open(gitHubRepository, '_blank') }>
           <Github className="w-4 h-4 mr-2" />
-          GitHub
+          Repo on GitHub
           </Button>
         </div>
     </div>
@@ -58,13 +57,13 @@ const [videoId, setVideoId] = useState<string | null>(null)
       <div className="flex flex-col flex-1 gap-4"> 
         <div className="grid grid-rows-2 gap-4 flex-1">
           <Textarea 
-            placeholder="Inclua aqui o prompt para a AI..." 
+            placeholder="Inclua aqui o Prompt para a IA..." 
             className="resize-none p-4 leading-relaxed"
             value={input}
             onChange={handleInputChange}
           />
           <Textarea 
-            placeholder="Resultado gerado pela AI..." 
+            placeholder="Resultado Gerado pela IA..." 
             readOnly 
             className="resize-none p-4 leading-relaxed"
             value={completion}
@@ -79,11 +78,11 @@ const [videoId, setVideoId] = useState<string | null>(null)
           <Separator />
           <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-              <Label>Prompt</Label>
+              <Label>Escolha um Prompt:</Label>
               <PromptSelect onPromptSelected={setInput} />
             </div> 
             <div className="space-y-2">
-              <Label>Modelo</Label>
+              <Label>Modelo da IA:</Label>
               <Select disabled defaultValue='gpt3.5'>
                 <SelectTrigger>
                   <SelectValue />
@@ -93,12 +92,12 @@ const [videoId, setVideoId] = useState<string | null>(null)
                 </SelectContent>
               </Select>
               <span className="block text-xs text-muted-foreground italic">
-                Você poderá customizar esta opção em breve
+                Você poderá customizar esta opção em breve...
               </span>
             </div>
             <Separator/>
             <div className="space-y-4">
-              <Label>Temperatura</Label>
+              <Label>Temperatura para a IA:</Label>
               <Slider 
               min={0}
               max={1}

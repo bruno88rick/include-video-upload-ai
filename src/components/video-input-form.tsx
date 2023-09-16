@@ -11,10 +11,10 @@ import { api } from "@/lib/axios";
 type Status = 'waiting' | 'converting' | 'uploading' | 'generating' | 'success'
 
 const statusMessages = {
-  converting: 'Convertendo...',
-  generating: 'Transcrevendo...',
-  uploading: 'Carregando',
-  success: 'Sucesso!! 😊🙌',
+  converting: 'Preparando a mágica... Aguarde!',
+  generating: 'Pedindo a IA pra Transcrever...',
+  uploading: 'Carregando vídeo...',
+  success: 'Eba! Sucesso! 😊🙌 Continue abaixo👇',
 }
 
 interface VideoInputFormProps{
@@ -141,7 +141,7 @@ export function VideoInputForm(props: VideoInputFormProps){
           <input type="file" id="video" accept="video/mp4" className="sr-only" onChange={handleFileSelected} />
           <Separator/>
           <div className="space-y-2">
-            <Label htmlFor="transcription_prompt">Prompt de Transcrição</Label>
+            <Label htmlFor="transcription_prompt">Ajude a IA digitando de 1 a 3 palavras chave:</Label>
             <Textarea
               ref={promptInputRef}
               disabled={status != 'waiting'} 
@@ -154,7 +154,7 @@ export function VideoInputForm(props: VideoInputFormProps){
             data-success={status == 'success'}
             disabled={status != "waiting"} 
             type="submit" 
-            className="w-full data-[success=true]:bg-emerald-400"  
+            className="w-full data-[success=true]:bg-emerald-700"  
           >
             {status == 'waiting' ? (
               <>

@@ -6,7 +6,7 @@ async function main() {
 
   await prisma.prompt.create({
     data: {
-      title: 'Título YouTube',
+      title: 'Gerar Títulos para o YouTube',
       template: `Seu papel é gerar três títulos para um vídeo do YouTube.
 
 Abaixo você receberá uma transcrição desse vídeo, use essa transcrição para gerar os títulos.
@@ -31,7 +31,7 @@ Transcrição:
 
   await prisma.prompt.create({
     data: {
-      title: 'Descrição YouTube',
+      title: 'Gerar Descrição para o YouTube',
       template: `Seu papel é gerar uma descrição sucinta para um vídeo do YouTube.
   
 Abaixo você receberá uma transcrição desse vídeo, use essa transcrição para gerar a descrição.
@@ -58,7 +58,7 @@ Transcrição:
 
   await prisma.prompt.create({
     data: {
-      title: 'Capítulo YouTube',
+      title: 'Gerar Capítulos para o YouTube',
       template: `Seu papel é gerar capítulos para um vídeo do YouTube.
 
 Abaixo você receberá uma transcrição desse vídeo, use essa transcrição para gerar os capítulos, com base nos assuntos falados.
@@ -73,6 +73,38 @@ Retorne os capítulos em formato de lista como no exemplo abaixo:
 - Capítulo 2
 - Capítulo 3
 '''
+
+Transcrição:
+'''
+{transcription}
+'''`.trim()
+    }
+  })
+
+  await prisma.prompt.create({
+    data: {
+      title: 'Resumir o Video',
+      template: `Seu papel é resunir um vídeo.
+
+Abaixo você receberá uma transcrição desse vídeo, use essa transcrição para fazer um resumo do que está sendo falado.
+
+O resumo devem ter no máximo 1000 caracteres.
+
+Transcrição:
+'''
+{transcription}
+'''`.trim()
+    }
+  })
+
+  await prisma.prompt.create({
+    data: {
+      title: 'Pedido Personalizado para a IA',
+      template: `Digite aqui o que você deseja perguntar para a IA sobre o vídeo (Não esqueça de deletar esta frase e mantenha tudo que está escrito de Transcrição pra baixo).
+
+
+
+
 
 Transcrição:
 '''
